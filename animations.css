@@ -122,3 +122,38 @@
                 background-color:rgb(135, 141, 136) ;
             }
         }
+        @keyframes ani33 {
+            from{
+                background-color:rgb(255, 0, 0) ; 
+                color:blueviolet;
+                
+             }
+             20% {
+                background-color: orange ;
+                color:rgb(255, 0, 0);
+                
+             }
+             25% {
+                background-color: yellow;
+                color: orangered;
+               
+             }
+             45% {
+                background-color: green;
+                color: yellow;
+                
+             }
+             65% {
+                background-color: skyblue;
+                color: green;
+             }
+             85% {
+                background-color: blue;
+                color: skyblue;
+             }
+             
+             to{
+                 background-color:blueviolet; 
+                 color: blue;
+             }
+         }

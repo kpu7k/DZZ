@@ -4,7 +4,7 @@
         }
         .root {
             display:grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 8.3333% 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             align-items: flex-start;
             justify-content: center;
@@ -104,7 +104,8 @@
             grid-column-end: 4;
             grid-row-start: 4;
             grid-row-end: 5;
-            font-size: 150%;
+            font-size: 200%;
+            
         }
         .contacts {
             animation-name: ani2;
@@ -112,14 +113,14 @@
            animation-iteration-count: infinite;
            animation-direction: alternate;
            animation-timing-function: ease-in-out;
-            font-size: 150%;
+            font-size: 200%;
             grid-column-start: 9;
             grid-column-end: 11;
             grid-row-start: 4;
             grid-row-end: 5;
         }
         .portfolio {
-            font-size: 150%;
+            font-size: 200%;
             grid-column-start: 7;
             grid-column-end: 9;
             grid-row-start: 6;
@@ -151,6 +152,7 @@
             transform: rotateY(90deg);
             animation: right-side 0.2s ease alternate ;
             color: rgba(100, 101, 107,100);
+            font-size: 150%;
         }   
         .al1, .al3,.al11  {
             animation-name: progress;
@@ -182,6 +184,49 @@
            animation-iteration-count: infinite;
            animation-direction: alternate;
            grid-row-start: auto;
-           
         }
-        
+        .ph {
+            transform: rotateZ(-90deg);
+        }
+        .but4{
+            transform: rotateZ(-90deg);
+            visibility: hidden;
+        }
+        .contacts:hover .but1 {
+            animation-name: ani33;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            
+        }
+        .main:hover .but2 {
+            animation-name: ani33;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .portfolio:hover .but3 {
+            animation-name: ani33;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .photo:hover .but4 {
+            animation-name: ani33;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            visibility: visible;
+            font-size: 190%;
+        }
+        .ph1 {
+            display: block;
+            transform:rotatez(-90deg) translatex(-10vw);
+            font-size: 150%;
+        }
+        .photo:hover .ph1 {
+            visibility: hidden;
+        }
+        .cube:hover {
+            box-shadow: 10px 10px 30px 10px black;
+        }
