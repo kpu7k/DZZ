@@ -1,0 +1,187 @@
+ html, body {
+            height: 100%;
+            font-family: sans-serif;
+        }
+        .root {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            align-items: flex-start;
+            justify-content: center;
+            perspective: 2000px;
+            perspective-origin: 100% 100%;
+            margin: 0;
+            height: 100%;
+            
+        }
+        .cube {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            position: relative;
+            margin-top: 0;
+            padding: 0;
+            
+        }
+        .cube, .side, .title {
+            display: block;
+            background-color: rgba(100, 101, 107);
+            border: 1px solid rgb(0, 0, 0);
+            box-sizing: border-box;
+            border-collapse: collapse;
+        }
+        .side, .title {
+            
+            animation-name: ani2;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .side {
+            position: absolute;
+        }
+        .cube:hover .top, .bottom {
+            height: inherit;
+            left: 0px;
+            right: 0px;
+            bottom:0px;
+        }
+        .cube:hover .top {
+            top: 0;
+            height: 8.1vw;
+            transform-origin: 50% 0;
+            transform: rotateX(90deg);
+            animation: top-side 0.2s ease alternate ;
+        }
+        .cube:hover .bottom {
+            bottom: 0;
+            height: 8.1vw;
+            transform-origin: 50% 100%;
+            transform: rotateX(-90deg);
+            animation: bottom-side 0.2s ease alternate ;
+        }
+        .cube:hover .left, .right {
+            width: inherit;
+            top: -2px;
+            bottom: -2px;
+        }
+        .cube:hover .left {
+            left: 0;
+            transform-origin: 0 50%;
+            transform: rotateY(-90deg);
+            animation: left-side 0.2s ease alternate ;
+        }
+        .cube:hover .right {
+            right: 0;
+            transform-origin: 100% 50%;
+            transform: rotateY(90deg);
+            animation: right-side 0.2s ease alternate ;
+        }
+        .cube:hover .title {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            bottom: -2px;
+            right: -2px;
+            transform: translateZ(8vw);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 50px;
+            animation: title-side 0.1s ease alternate ;
+            
+        }
+        
+        .cube:active .title  {
+          
+            transform: translateZ(6vw);
+            background-color: burlywood;
+            
+        }
+        .main {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            font-size: 150%;
+        }
+        .contacts {
+            animation-name: ani2;
+            animation-duration: 1s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           animation-timing-function: ease-in-out;
+            font-size: 150%;
+            grid-column-start: 9;
+            grid-column-end: 11;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+        .portfolio {
+            font-size: 150%;
+            grid-column-start: 7;
+            grid-column-end: 9;
+            grid-row-start: 6;
+            grid-row-end: 7;
+        }
+        .photo {
+            font-size: 150%;
+            grid-column-start: 5;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 6;    
+        }
+        .cube:hover .lefts, .rights {
+            width: inherit;
+            top: -2px;
+            bottom: -2px;
+        }
+        .cube:hover .lefts {
+            width: 8vw;
+            left: 0;
+            transform-origin: 0 50%;
+            transform: rotateY(-90deg);
+            animation: left-side 0.2s ease alternate ;
+        }
+        .cube:hover .rights {
+            width: 8vw;
+            right: 0;
+            transform-origin: 100% 50%;
+            transform: rotateY(90deg);
+            animation: right-side 0.2s ease alternate ;
+            color: rgba(100, 101, 107,100);
+        }   
+        .al1, .al3,.al11  {
+            animation-name: progress;
+            animation-duration: 6s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           grid-column-start: auto;
+           
+        }
+        .al5, .al7, .al9 {
+            animation-name: ani2;
+            animation-duration: 4s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           grid-column-start: auto;
+        }
+        .al2, .al4, .al6 {
+           background-color: rgb(212, 212, 212);
+           animation-name: progress;
+           animation-duration: 3s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           grid-row-start: auto;
+           
+        }
+        .al8, .al10, .al12 {
+           animation-name: progress;
+           animation-duration: 2s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+           grid-row-start: auto;
+           
+        }
+        
